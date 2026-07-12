@@ -3,134 +3,529 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aqiqah Zahra Ramadhani Van Gobel</title>
+
+    <title>Undangan Aqiqah | Zahra Ramadhani Van Gobel</title>
+
+    <meta name="description" content="Undangan Tasyakuran Aqiqah Zahra Ramadhani Van Gobel">
+    <meta name="theme-color" content="#0f766e">
+
+    <link rel="icon" href="assets/favicon.png">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Amiri:wght@700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Amiri:wght@700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
+<!-- Loading -->
 <div id="loader">
-    <h2>Memuat Undangan...</h2>
+    <div class="spinner"></div>
+    <h5>Memuat Undangan...</h5>
 </div>
 
+<!-- Musik -->
+<audio id="music" loop>
+    <source src="assets/music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Tombol Musik -->
+<button id="musicButton">
+    🎵
+</button>
+
+<!-- Cover -->
 <section class="cover">
 
-<div class="overlay">
+    <div class="cover-overlay">
 
-<h3>بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</h3>
+        <p class="arabic">
+            بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ
+        </p>
 
-<p>TASYAKURAN AQIQAH</p>
+        <h4>TASYAKURAN AQIQAH</h4>
 
-<h1>Zahra Ramadhani Van Gobel</h1>
+        <img src="assets/zahra.jpg"
+             class="cover-photo"
+             alt="Zahra">
 
-<p>Putri dari</p>
+        <h1>Zahra Ramadhani Van Gobel</h1>
 
-<h2>Rahmat Van Gobel</h2>
+        <p class="parents">
+            Putri dari
+            <br>
+            <strong>Rahmat Van Gobel</strong>
+            <br>&<br>
+            <strong>Irawati Humagi</strong>
+        </p>
+
+        <div class="guest-box">
+
+            <small>Kepada Yth.</small>
+
+            <h3 id="guestName">
+                Bapak/Ibu/Saudara/i
+            </h3>
+
+        </div>
+
+        <button id="openInvitation"
+                class="btn btn-success btn-lg mt-4">
+
+            Buka Undangan
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- Konten -->
+<div id="mainContent" style="display:none;">
+    <!-- ========================= -->
+<!-- UCAPAN -->
+<!-- ========================= -->
+
+<section class="container py-5">
+
+    <div class="text-center mb-5" data-aos="fade-up">
+
+        <h2 class="section-title">
+            Assalamu'alaikum Warahmatullahi Wabarakatuh
+        </h2>
+
+        <p class="lead mt-4">
+
+            Dengan memohon rahmat dan ridha Allah SWT,
+            kami mengundang Bapak/Ibu/Saudara/i
+            untuk menghadiri acara Tasyakuran Aqiqah
+            putri kami.
+
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- AYAT -->
+<!-- ========================= -->
+
+<section class="container pb-5">
+
+    <div class="card shadow-lg border-0 p-4 text-center glass"
+         data-aos="zoom-in">
+
+        <h3 class="arabic mb-4">
+
+            رَبِّ هَبْ لِي مِنَ الصَّالِحِينَ
+
+        </h3>
+
+        <p>
+
+            "Ya Tuhanku, anugerahkanlah kepadaku
+            (seorang anak) yang termasuk orang-orang
+            yang saleh."
+
+        </p>
+
+        <small>(QS. Ash-Shaffat : 100)</small>
+
+    </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- PROFIL -->
+<!-- ========================= -->
+
+<section class="container py-5">
+
+<div class="row align-items-center">
+
+<div class="col-lg-5 text-center"
+     data-aos="fade-right">
+
+<img src="assets/zahra.jpg"
+     class="img-fluid rounded-circle shadow profile-photo">
+
+</div>
+
+<div class="col-lg-7"
+     data-aos="fade-left">
+
+<h2 class="section-title">
+
+Zahra Ramadhani Van Gobel
+
+</h2>
+
+<p class="mt-4">
+
+Putri tercinta dari
+
+</p>
+
+<h4>
+
+Rahmat Van Gobel
+
+</h4>
 
 <p>&</p>
 
-<h2>Irawati Humagi</h2>
+<h4>
 
-<div id="guestName"></div>
+Irawati Humagi
 
-<button id="openInvitation">
-Buka Undangan
-</button>
+</h4>
+
+<p class="mt-4">
+
+Semoga Allah SWT menjadikan
+Ananda Zahra sebagai anak yang
+shalihah, sehat, cerdas,
+berbakti kepada kedua orang tua,
+serta menjadi penyejuk hati keluarga.
+
+Aamiin Ya Rabbal 'Alamin.
+
+</p>
+
+</div>
 
 </div>
 
 </section>
 
-<section id="content">
+<!-- ========================= -->
+<!-- COUNTDOWN -->
+<!-- ========================= -->
 
-<h2>Assalamu'alaikum Wr. Wb.</h2>
+<section class="container py-5">
 
-<p>
-Dengan memohon rahmat dan ridho Allah SWT,
-kami mengundang Bapak/Ibu/Saudara/i
-untuk menghadiri acara Tasyakuran Aqiqah
-putri kami.
-</p>
+<div class="text-center mb-4">
 
-<div class="photo">
+<h2 class="section-title">
 
-<img src="assets/zahra.jpg" alt="Zahra">
+Menuju Hari Bahagia
+
+</h2>
 
 </div>
 
-<h2>Zahra Ramadhani Van Gobel</h2>
+<div class="row text-center countdown">
 
-<p>Putri dari</p>
+<div class="col-3">
 
-<p>
-Rahmat Van Gobel
-<br>
-&
-<br>
-Irawati Humagi
-</p>
+<div class="count-box">
 
-<h2>Hari Acara</h2>
+<h2 id="days">00</h2>
 
-<p>
-Minggu,
-19 Juli 2026
-</p>
+<span>Hari</span>
 
-<p>
-Pukul 10.00 WITA
-</p>
+</div>
 
-<h2>Lokasi</h2>
+</div>
 
-<p>
-Kompleks Kantor Desa Boroko Utara
-<br>
-Desa Boroko Utara
-<br>
-Kecamatan Kaidipang
-</p>
+<div class="col-3">
 
-<a href="https://maps.app.goo.gl/7A1WCSJpqJKYkJy87?g_st=ac" target="_blank">
-Lihat Google Maps
-</a>
+<div class="count-box">
 
-<h2>RSVP</h2>
+<h2 id="hours">00</h2>
 
-<a href="https://wa.me/6285143983225">
+<span>Jam</span>
+
+</div>
+
+</div>
+
+<div class="col-3">
+
+<div class="count-box">
+
+<h2 id="minutes">00</h2>
+
+<span>Menit</span>
+
+</div>
+
+</div>
+
+<div class="col-3">
+
+<div class="count-box">
+
+<h2 id="seconds">00</h2>
+
+<span>Detik</span>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- ========================= -->
+<!-- DETAIL ACARA -->
+<!-- ========================= -->
+
+<section class="container py-5">
+
+    <div class="text-center mb-5" data-aos="fade-up">
+        <h2 class="section-title">Detail Acara</h2>
+    </div>
+
+    <div class="card shadow-lg border-0 p-4 glass text-center" data-aos="zoom-in">
+
+        <h4>📅 Minggu, 19 Juli 2026</h4>
+
+        <h5 class="mt-3">🕙 Pukul 10.00 WITA</h5>
+
+        <hr>
+
+        <p>
+
+            Kompleks Kantor Desa Boroko Utara<br>
+
+            Desa Boroko Utara<br>
+
+            Kecamatan Kaidipang
+
+        </p>
+
+        <a
+            class="btn btn-success btn-lg mt-3"
+            target="_blank"
+            href="https://maps.app.goo.gl/7A1WCSJpqJKYkJy87?g_st=ac">
+
+            📍 Lihat Lokasi
+
+        </a>
+
+    </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- RSVP -->
+<!-- ========================= -->
+
+<section class="container py-5">
+
+<div class="card shadow-lg border-0 p-5 text-center glass"
+     data-aos="fade-up">
+
+<h2>
+
 Konfirmasi Kehadiran
+
+</h2>
+
+<p class="mt-3">
+
+Klik tombol di bawah ini
+untuk mengirim konfirmasi
+kehadiran melalui WhatsApp.
+
+</p>
+
+<a
+class="btn btn-success btn-lg mt-3"
+
+target="_blank"
+
+href="https://wa.me/6285143983225?text=Assalamu'alaikum,%20InsyaAllah%20saya%20akan%20hadir%20di%20Aqiqah%20Ananda%20Zahra%20Ramadhani%20Van%20Gobel.">
+
+📲 RSVP WhatsApp
+
 </a>
 
-<h2>Doa</h2>
+</div>
 
-<p>
+</section>
+
+<!-- ========================= -->
+<!-- GALERI -->
+<!-- ========================= -->
+
+<section class="container py-5">
+
+<div class="text-center mb-5">
+
+<h2 class="section-title">
+
+Galeri Zahra
+
+</h2>
+
+</div>
+
+<div class="row g-4">
+
+<div class="col-md-4">
+
+<img
+src="assets/zahra.jpg"
+class="img-fluid rounded shadow gallery-img">
+
+</div>
+
+<div class="col-md-4">
+
+<img
+src="assets/gallery1.jpg"
+class="img-fluid rounded shadow gallery-img">
+
+</div>
+
+<div class="col-md-4">
+
+<img
+src="assets/gallery2.jpg"
+class="img-fluid rounded shadow gallery-img">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- DOA -->
+<!-- ========================= -->
+
+<section class="container py-5">
+
+<div class="card shadow-lg border-0 p-5 text-center glass">
+
+<h2>
+
+Doa Untuk Ananda
+
+</h2>
+
+<h3 class="arabic mt-4">
 
 بارك الله لك في الموهوب
 وشكرت الواهب
 وبلغ أشده
 ورزقت بره
 
+</h3>
+
+<p class="mt-4">
+
+Semoga Allah memberkahi
+Ananda Zahra,
+menjadikannya anak yang
+shalihah,
+berbakti kepada kedua orang tua,
+sehat,
+cerdas,
+serta membawa keberkahan
+bagi keluarga.
+
+Aamiin Ya Rabbal 'Alamin.
+
 </p>
 
-<p>
-"Semoga Allah memberkahi anak yang telah
-dikaruniakan, menjadikan ia anak yang
-berbakti kepada kedua orang tuanya,
-serta menjadi penyejuk hati keluarga."
-</p>
+</div>
 
-<footer>
+</section>
+<!-- ========================= -->
+<!-- UCAPAN PENUTUP -->
+<!-- ========================= -->
 
-Terima kasih atas doa dan kehadiran
-Bapak/Ibu/Saudara/i
+<section class="container py-5">
+
+    <div class="card shadow-lg border-0 p-5 text-center glass" data-aos="fade-up">
+
+        <h2>Terima Kasih</h2>
+
+        <p class="mt-4">
+
+            Merupakan suatu kehormatan dan kebahagiaan bagi kami
+            apabila Bapak/Ibu/Saudara/i berkenan hadir
+            dan memberikan doa terbaik
+            kepada putri kami.
+
+        </p>
+
+        <h4 class="mt-4">
+
+            Wassalamu'alaikum
+            Warahmatullahi Wabarakatuh
+
+        </h4>
+
+        <div class="mt-5">
+
+            <h3>Zahra Ramadhani Van Gobel</h3>
+
+            <p>
+
+                Rahmat Van Gobel
+                <br>
+                &
+                <br>
+                Irawati Humagi
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Tombol Kembali -->
+<button id="backToTop">
+    ↑
+</button>
+
+<!-- Footer -->
+
+<footer class="text-center py-4">
+
+    <small>
+
+        © 2026
+        Tasyakuran Aqiqah
+        Zahra Ramadhani Van Gobel
+
+    </small>
 
 </footer>
 
-</section>
+</div>
+
+<!-- Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+
+AOS.init({
+
+duration:1000,
+
+once:true
+
+});
+
+</script>
 
 <script src="script.js"></script>
 
