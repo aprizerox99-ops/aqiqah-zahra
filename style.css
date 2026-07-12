@@ -1,0 +1,493 @@
+/* ======================================================
+   AQIQAH ZAHRA
+   STYLE.CSS
+====================================================== */
+
+:root{
+    --primary:#0f766e;
+    --secondary:#f8f5ef;
+    --gold:#d4af37;
+    --text:#333;
+    --white:#fff;
+    --shadow:0 10px 30px rgba(0,0,0,.12);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:var(--secondary);
+    color:var(--text);
+    overflow-x:hidden;
+}
+
+/* Background */
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+left:0;
+top:0;
+
+width:100%;
+height:100%;
+
+background:
+linear-gradient(rgba(255,255,255,.92),
+rgba(255,255,255,.92)),
+url("assets/bg-pattern.png");
+
+background-size:300px;
+
+z-index:-1;
+
+}
+
+/* Loader */
+
+#loader{
+
+position:fixed;
+
+left:0;
+top:0;
+
+width:100%;
+height:100%;
+
+background:white;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+z-index:9999;
+
+}
+
+.spinner{
+
+width:70px;
+height:70px;
+
+border:6px solid #ddd;
+
+border-top:6px solid var(--primary);
+
+border-radius:50%;
+
+animation:spin 1s linear infinite;
+
+margin-bottom:20px;
+
+}
+
+@keyframes spin{
+
+100%{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+/* Cover */
+
+.cover{
+
+height:100vh;
+
+background:
+linear-gradient(rgba(15,118,110,.55),
+rgba(15,118,110,.55)),
+url("assets/zahra.jpg");
+
+background-size:cover;
+
+background-position:center;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+padding:20px;
+
+color:white;
+
+}
+
+.cover-overlay{
+
+backdrop-filter:blur(12px);
+
+background:rgba(255,255,255,.12);
+
+padding:40px;
+
+border-radius:25px;
+
+max-width:650px;
+
+width:100%;
+
+box-shadow:var(--shadow);
+
+}
+
+.cover-photo{
+
+width:180px;
+
+height:180px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+border:6px solid white;
+
+margin:25px 0;
+
+box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+}
+
+.cover h1{
+
+font-size:2.5rem;
+
+font-weight:700;
+
+margin-top:15px;
+
+}
+
+.arabic{
+
+font-family:'Amiri',serif;
+
+font-size:2rem;
+
+color:var(--gold);
+
+line-height:1.8;
+
+}
+
+.parents{
+
+font-size:1.1rem;
+
+margin-top:20px;
+
+line-height:2;
+
+}
+
+.guest-box{
+
+margin-top:35px;
+
+padding:18px;
+
+background:rgba(255,255,255,.18);
+
+border-radius:15px;
+
+}
+
+.guest-box h3{
+
+margin-top:8px;
+
+font-weight:600;
+
+}
+
+/* Tombol */
+
+.btn-success{
+
+background:var(--primary);
+
+border:none;
+
+padding:12px 30px;
+
+border-radius:40px;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.btn-success:hover{
+
+transform:translateY(-4px);
+
+background:#0b5d57;
+
+}
+/* =========================================
+   SECTION
+========================================= */
+
+.section-title{
+    font-size:2rem;
+    font-weight:700;
+    color:var(--primary);
+    margin-bottom:15px;
+}
+
+.glass{
+    background:rgba(255,255,255,.75);
+    backdrop-filter:blur(14px);
+    border-radius:25px;
+    box-shadow:var(--shadow);
+}
+
+/* =========================================
+   PROFILE
+========================================= */
+
+.profile-photo{
+    width:280px;
+    height:280px;
+    object-fit:cover;
+    border-radius:50%;
+    border:8px solid var(--white);
+    box-shadow:var(--shadow);
+}
+
+/* =========================================
+   COUNTDOWN
+========================================= */
+
+.countdown{
+    margin-top:30px;
+}
+
+.count-box{
+
+    background:var(--white);
+
+    border-radius:20px;
+
+    padding:25px 10px;
+
+    box-shadow:var(--shadow);
+
+    transition:.3s;
+
+}
+
+.count-box:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.count-box h2{
+
+    font-size:2.3rem;
+
+    color:var(--primary);
+
+    font-weight:700;
+
+}
+
+.count-box span{
+
+    color:#666;
+
+}
+
+/* =========================================
+   GALLERY
+========================================= */
+
+.gallery-img{
+
+    width:100%;
+
+    height:320px;
+
+    object-fit:cover;
+
+    border-radius:18px;
+
+    transition:.4s;
+
+    cursor:pointer;
+
+}
+
+.gallery-img:hover{
+
+    transform:scale(1.05);
+
+}
+
+/* =========================================
+   MUSIC
+========================================= */
+
+#musicButton{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:25px;
+
+    width:60px;
+
+    height:60px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    color:white;
+
+    font-size:24px;
+
+    cursor:pointer;
+
+    z-index:999;
+
+    box-shadow:var(--shadow);
+
+}
+
+/* =========================================
+   BACK TO TOP
+========================================= */
+
+#backToTop{
+
+    position:fixed;
+
+    left:25px;
+
+    bottom:25px;
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:var(--gold);
+
+    color:white;
+
+    font-size:24px;
+
+    cursor:pointer;
+
+    display:none;
+
+    z-index:999;
+
+    box-shadow:var(--shadow);
+
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer{
+
+    background:var(--primary);
+
+    color:white;
+
+    margin-top:60px;
+
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media(max-width:768px){
+
+.cover h1{
+
+font-size:2rem;
+
+}
+
+.cover-photo{
+
+width:150px;
+height:150px;
+
+}
+
+.arabic{
+
+font-size:1.5rem;
+
+}
+
+.section-title{
+
+font-size:1.6rem;
+
+}
+
+.profile-photo{
+
+width:220px;
+height:220px;
+
+}
+
+.count-box{
+
+padding:15px 5px;
+
+}
+
+.count-box h2{
+
+font-size:1.5rem;
+
+}
+
+.gallery-img{
+
+height:220px;
+
+}
+
+}
